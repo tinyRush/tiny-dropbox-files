@@ -1,6 +1,5 @@
 import { Request, Response } from 'express';
 import { TinyDropboxFilesService } from './TinyDropboxFilesService';
-import {  } from '../index';
 
 class TinyDropboxFilesController {
   private _filesService: TinyDropboxFilesService;

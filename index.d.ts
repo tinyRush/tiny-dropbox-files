@@ -1,3 +1,6 @@
+/// <reference types="multer" />
+import { Request, Response } from 'express';
+
 interface IFilesListFolderArg {
   /** 
    * The path to the folder you want to see the contents of.
@@ -410,7 +413,7 @@ declare class TinyDropboxFilesService {
   getFilesList(path: string): Promise<IFilesListFolderResult>;
   uploadFiles(
     path: string,
-    files: Express.Multer.File[]
+    files: Express.Multer.File []
   ): Promise<IFilesFileMetadata[]>;
   downloadFile(resize: any, path: string): Promise<Buffer>;
   getThumbnail(arg: IFilesThumbnailArg): Promise<IFilesFileMetadata>;
